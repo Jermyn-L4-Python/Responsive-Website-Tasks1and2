@@ -1,0 +1,568 @@
+body, html{
+    background-color: #e9e9e9;
+    font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container{
+    background-color: white;
+    border: solid black 1px;
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+header{
+    text-align: center;
+    padding-top: 50px;
+}
+
+#logo{
+    width: 200px;
+}
+
+.navbar{
+    margin-top: 50px; 
+}
+ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 50px;
+}
+
+li{
+    font-size: 30px;
+    margin: 50px;   
+}
+
+#title_section{
+    padding: 50px;
+}
+
+.title{
+    font-size: 120px;
+    text-align: left;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.subtitle{
+    font-size: 50px;
+    text-align: left;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.title_text{
+    font-size: 30px;
+}
+
+#headings_section{
+    /*column- count breaks the heading section into 3 columns */
+    column-count: 3;
+    padding: 50px;
+}
+
+h1{
+    font-size: 60px;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#images_section {
+    /*display grid to become a grid layout */
+    display: grid;
+    /*grid-template-columns creates the number of columns in the layout
+    1fr means fractional unit, meaning that one column takes an equal fraction(50%) of space in the container */
+    grid-template-columns: 1fr 1fr;    
+    border: solid black 1px;
+}
+
+#eulogy {
+    /* grid row specifies the item's location, in this case the span line makes sure
+    that the image will occupy 2 rows */
+    grid-row: span 2;
+    display: flex; 
+    width: 100%;
+}
+
+#encore,
+#articulation,
+#blurred,
+#encore_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto; 
+    object-fit: cover;        
+}
+
+.smaller{
+    display: grid;
+    /*similar to images_section, creates two equal columns*/
+    grid-template-columns: 1fr 1fr;
+}
+
+#author_section{
+    padding: 50px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    border: solid black 1px;
+}
+
+.beside{
+    margin: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+h2{
+    text-align: center;
+    font-size: 60px;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.beside, p{
+    text-align: left;
+}
+
+#pfp{
+    width: 200px;
+    /*border radius to make the image circular*/
+    border-radius: 50%; 
+    border: solid black 2px;
+
+}
+
+footer{
+    border: solid black 1px;
+    text-align: center;
+    padding: 50px;
+}
+
+
+/*media that will show for devices with a min-width of 720px and max-width of 1024px*/
+@media only screen and (max-width: 1024px){
+    body, html{
+        background-color: #e9e9e9;
+        font-size: 20px;
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    .container{
+        background-color: white;
+        border: solid black 1px;
+        margin: 30px;
+        justify-content: center;
+        align-items: center;
+            
+    }
+    
+    header{
+        text-align: center;
+        padding-top: 30px;
+    }
+    
+    #logo{
+        width: 80px;
+    }
+    
+    .navbar{
+        margin-top: 30px;
+    }
+    ul{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    li{
+        font-size: 5px;
+        margin: 30px;
+        
+    }
+    
+    #title_section{
+        padding: 30px;
+    }
+    
+    .title{
+        font-size: 75px;
+        text-align: center;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .subtitle{
+        font-size: 70px;
+        text-align: center;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .title_text{
+        font-size: 25px;
+        text-align: left;
+    }
+    
+    #headings_section{
+        /*changes the column number to only 1 column instead of 3*/
+        column-count: 1;
+        padding: 30px;
+    }
+    
+    h1{
+        text-align: center;
+        font-size: 60px;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    #images_section {
+        /*creates a grid layout*/
+        display: grid; 
+        /*repeat() function to create multiple columns of equal sizes*/
+        grid-template-columns: repeat(1, 1fr); 
+        /*creates 2 rows with height set to automamtic*/
+        grid-template-rows: auto auto;                  
+        border: solid black 1px;
+    }
+    
+    #eulogy {
+        /*will not show the image according to the wireframe given*/
+        display: none;
+    }
+    
+    #encore, #articulation, #blurred, #encore_2 {
+        object-fit: contain;
+        width: 100%;  
+        height: auto; 
+    }
+    
+    #author_section{
+        padding: 30px;
+        display: flex;  
+        align-items: center;
+        justify-content: center;
+        border: solid black 1px;
+    }
+    
+    .beside{
+        margin: 30px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    
+    h2{
+        text-align: center;
+        font-size: 60px;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    .beside, p{
+        text-align: left;
+    }
+    
+    #pfp{
+        width: 200px;
+        border-radius: 50%;
+        border: solid black 2px; 
+    }
+    
+    footer{
+        border: solid black 1px;
+        text-align: center;
+        padding: 30px;
+    }
+}
+
+/*media that will show for devices with a min-width of 540px and max-width of 720px*/
+@media only screen and (max-width: 720px){
+    paste code here
+    body, html{
+        background-color: #e9e9e9;
+        font-size: 15px;
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .container{
+        background-color: white;
+        border: solid black 1px;
+        margin: 20px;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    header{
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    #logo{
+        width: 80px;
+    }
+    
+    .navbar{
+        margin-top: 20px;
+    }
+    ul{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    li{
+        font-size: 15px;
+        margin: 20px;
+        
+    }
+
+    #title_section{
+        padding: 20px;
+        text-align: center;
+    }
+
+    .title{
+        font-size: 55px;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .subtitle{
+        font-size: 50px;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .title_text{
+        font-size: 20px;
+        text-align: left;
+    }
+
+    #headings_section{
+        padding: 20px;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 45px;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    #images_section{
+        /*will put images next to each other*/
+        display: flex;
+        /*if image is too big it will wrap onto the next line*/
+        flex-wrap: wrap;
+    }
+
+    #encore, #articulation, #blurred, #encore_2 {
+        /*width set to 100% and object fit set to contain in order to fit inside the container*/
+        width: 100%;
+        object-fit: contain;
+        border: black solid 1px;
+    }
+
+    .smaller{
+        display: flex;
+        flex-wrap: wrap;
+        /*set to none due to the grid overlapping with the flexbox layout*/
+        grid-template-columns: none;
+    }
+
+    #author_section{
+        display: flex;
+        /*sets the flex from top to bottom instead of left to right*/
+        flex-direction: column;
+        border: solid black 1px;
+    }
+
+    h2{
+        text-align: center;
+        font-size: 50px;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .beside, p{
+        text-align: left;
+    }
+
+    #pfp{
+        width: 200px;
+        border-radius: 50%;
+        /*order set to -1 for the image to be above the text */
+        order: -1;
+        border: solid black 2px; 
+    }
+
+    footer{
+        border: solid black 1px;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+
+/*media that will show for devices with a with a smaller size than 540px*/
+@media only screen and (max-width: 540px){
+    body, html{
+        background-color: #e9e9e9;
+        font-size: 15px;
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .container{
+        background-color: white;
+        border: solid black 1px;
+        margin: 12px;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    header{
+        text-align: center;
+        padding-top: 12px;
+    }
+    
+    #logo{
+        width: 80px;
+    }
+    
+    .navbar{
+        margin-top: 12px;
+    }
+    ul{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        gap: 12px;
+    }
+    
+    li{
+        font-size: 15px;
+        margin: 12px;
+        
+    }
+
+    #title_section{
+        padding: 12px;
+        text-align: center;
+    }
+
+    .title{
+        font-size: 40px;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .subtitle{
+        font-size: 35px;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .title_text{
+        font-size: 20px;
+        text-align: left;
+    }
+
+    #headings_section{
+        padding: 12px;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 45px;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    #images_section{
+        display: flex;
+        flex-wrap: wrap;
+        grid-template-columns: unset;
+        grid-template-rows: unset;
+    }
+
+    #encore,#articulation, #blurred, #encore2{
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .smaller{
+        display: flex;
+        flex-wrap: wrap;
+        grid-template-columns: none;
+    }
+
+    #author_section{
+        display: flex;
+        flex-direction: column;
+        border: solid black 1px;
+    }
+
+    h2{
+        text-align: center;
+        font-size: 40px;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .beside, p{
+        text-align: left;
+    }
+
+    #pfp{
+        width: 200px;
+        border-radius: 50%;
+        order: -1; 
+        border: solid black 2px;
+    }
+
+    footer{
+        border: solid black 1px;
+        text-align: center;
+        padding: 12px;
+    }
+}
+
